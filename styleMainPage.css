@@ -1,0 +1,119 @@
+
+/* pievieno stilu lapas ķermenim */
+body {
+    background: url('images/backround.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* iestata stilu konteinerim*/
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background: transparent; 
+    border-radius: 8px;
+}
+
+/* flexbox izkartojums*/
+.flexbox-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* stils panelim */
+.related-panel {
+    background-color: transparent; 
+    border-radius: 8px;
+    padding: 20px;
+    /*box-shadow: 0 4px 8px rgba(97, 4, 134, 0.89);*/
+    width: 100%;
+    text-align: center;
+}
+
+/* virsraksta stils */
+.related-panel h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+    transition: color 1s ease;
+    animation: changeColor 20s infinite;
+    
+}
+
+/* Stils sarakstam*/
+.related-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+/* Stils saraksta elementiem */
+.related-panel ul li {
+    margin: 12px; 
+}
+
+/* pogu stils */
+.related-panel ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1em; 
+    background-color: #a007ad;
+    padding: 10px 12px; 
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; 
+}
+
+/* effekts pogam */
+.related-panel ul li a:hover {
+    background-color: #350628;
+    box-shadow: 0 4px 8px rgba(225, 223, 226, 0.89);
+}
+
+/* stils kājenei*/
+.footer {
+    background-color: #a007ad;
+    color: #ffffff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.3em; 
+    font-weight: bold;
+}
+
+
+/*stils lietus pilem */
+.rain-particle {
+    position: fixed;
+    width: 1px;
+    height: 10px;
+    background-color: rgba(224, 217, 224, 0.9); 
+    animation: rain-drop linear infinite;
+}
+
+/* Animācija lietus krisanai */
+@keyframes rain-drop {
+    to {
+        transform: translateY(calc(100vh + 10px)); 
+    }
+}
+
+/*animacija virsraksta krasas mainisanai*/
+@keyframes changeColor {
+    50%, 50% {
+        color: #ffffff;
+    }
+    50%, 50% {
+        color: transparent; 
+    }
+}
